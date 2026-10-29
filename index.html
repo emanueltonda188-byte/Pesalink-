@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PesaLink — Compare your basket across Kenyan supermarkets</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header>
+    <h1>🧺 PesaLink</h1>
+    <p class="tagline">Build your basket once, see what it costs at every supermarket.</p>
+  </header>
+
+  <section class="card" id="stores-card">
+    <h2>Stores</h2>
+    <div id="store-chips" class="chips"></div>
+    <form id="add-store-form" class="row">
+      <input id="new-store" type="text" placeholder="Add a store, e.g. Naivas Narok" required>
+      <button type="submit">Add store</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Add a price</h2>
+    <p class="hint">Seen a price on a shelf or receipt? Add it. Prices are shared in this demo via the list below.</p>
+    <form id="add-price-form" class="form-grid">
+      <input id="price-item" type="text" placeholder="Item, e.g. Maize Flour" required>
+      <input id="price-size" type="text" placeholder="Size / brand, e.g. 2kg">
+      <input id="price-value" type="number" min="0" step="any" placeholder="Price (KSh)" required>
+      <select id="price-store" required></select>
+      <button type="submit">Add price</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>Prices</h2>
+    <p class="hint">Seeded prices below are <strong>examples</strong> to try the comparison — replace them with real prices from your receipts.</p>
+    <ul id="price-list" class="list"></ul>
+  </section>
+
+  <section class="card">
+    <h2>Your basket</h2>
+    <form id="add-basket-form" class="row">
+      <select id="basket-item" required></select>
+      <input id="basket-qty" type="number" min="1" step="1" value="1" required>
+      <button type="submit">Add to basket</button>
+    </form>
+    <ul id="basket-list" class="list"></ul>
+    <p id="basket-empty" class="hint">Starter basket loaded below — edit it freely, or clear it and build your own.</p>
+  </section>
+
+  <section class="card">
+    <h2>Comparison</h2>
+    <div id="comparison" class="comparison"></div>
+  </section>
+
+  <footer>
+    <p>PesaLink v1 — prices are saved in your browser only (no account, no shared database yet). Slice 2 ideas: receipt-photo scanning, shared prices, accounts.</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

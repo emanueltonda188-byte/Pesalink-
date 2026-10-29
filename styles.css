@@ -1,0 +1,74 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f4f6f1;
+  color: #222;
+}
+main { max-width: 640px; margin: 0 auto; padding: 16px; }
+header { text-align: center; margin: 8px 0 20px; }
+h1 { margin: 0; font-size: 2rem; }
+.tagline { color: #555; margin: 6px 0 0; }
+h2 { margin: 0 0 10px; font-size: 1.15rem; }
+.card {
+  background: #fff;
+  border: 1px solid #e2e6dd;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+.hint { color: #666; font-size: 0.9rem; margin: 0 0 10px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; }
+.row input, .row select { flex: 1; min-width: 120px; }
+.form-grid { display: grid; gap: 8px; }
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #1a7f37;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+}
+button:hover { background: #166c2e; }
+button.danger { background: #c0392b; padding: 4px 10px; font-size: 0.85rem; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.chip {
+  background: #e7f3e8;
+  color: #1a7f37;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-weight: 600;
+}
+.list { list-style: none; margin: 0; padding: 0; }
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+.list li:last-child { border-bottom: none; }
+.badge {
+  background: #f1c40f;
+  color: #333;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.comparison { display: grid; gap: 10px; }
+.store-result { border: 1px solid #e2e6dd; border-radius: 10px; padding: 12px; }
+.store-result.cheapest { border: 2px solid #1a7f37; background: #f0faf1; }
+.store-result h3 { margin: 0 0 4px; }
+.store-result .total { font-size: 1.3rem; font-weight: 800; }
+.missing { color: #b3541e; font-size: 0.9rem; }
+footer { text-align: center; color: #888; font-size: 0.85rem; padding: 8px; }
